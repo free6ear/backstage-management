@@ -91,15 +91,15 @@
 /*登录框样式*/
 .form-horizontal{
     background: #fff;
-    margin: 135px 225px;
     padding-bottom: 10px;
     border-radius: 15px;
     text-align: center; /*定义行内文字相当于父元素居中对齐*/
     
 }
 .form-horizontal .heading{
+    color: black;
     display: block;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 700;
     padding: 35px 0;
     border-bottom: 1px solid #f0f0f0;

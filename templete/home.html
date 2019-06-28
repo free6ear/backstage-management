@@ -12,8 +12,9 @@
     <link rel="shortcut icon" href="../imgs/paper_icon.png">
     <style>
         .head{
-            width: 80vw;
+            width: 100vw;
             height: 80px;
+            display: flex;
         }
         .body{
             width: 80vw;
@@ -26,15 +27,18 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="row clearfix head">
-            <div class="col-xs-offset-1 col-md-10 column">
-                <h2 style="color: #cf000f; text-align: center"><b>论文资讯</b></h2>
-            </div>
-            <div class="col-md-1 column">
-                <img src="../imgs/main_logo.png" style="margin-top: 18px; height: auto; width: 160px;" alt="东南汽车">
+    <div class="container-fluid">
+        <div class="head">
+            <div class="row clearfix">
+                <div class="col-md-10">
+                    <h2 style="color: #cf000f; text-align: right"><b>论文资讯</b></h2>
+                </div>
+                <div class="col-md-2 column middle ">
+                    <img src="../imgs/main_logo.png" style="margin-top: 18px; height: auto; width: 160px;" alt="东南汽车">
+                </div>
             </div>
         </div>
+            
         <div class="row clearfix body">
             <!--左上角三角形-->
             <!-- <div class="col-xs-1" id="triangle" style="width: 5px; height:5px; margin-bottom: -85px"></div> -->
