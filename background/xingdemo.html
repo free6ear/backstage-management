@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/jquery/2.0.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/customer.css">
+    <link rel="stylesheet" href="../css/caseManagement.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/red.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="./css/themes/azure.css" id="themes">
+    <link href="../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../imgs/back_icon.png">
+    <style>
+        @charset "UTF-8";
+
+        .navbar-form .form-control {
+            background-color: #FFF;
+            border: 1px solid rgba(251, 64, 75, 0.8);
+            border-left: 0 none;
+        }
+
+        .navbar-form .form-control:focus {
+            border: 1px solid #FB404B;
+            border-left: 0 none;
+        }
+
+        .navbar-default .navbar-nav>li>a:hover {
+            color: rgb(255, 91, 91);
+        }
+
+        /*设置 tab 页面 hover的颜色*/
+        .nav-tabs>li.active>a:hover,
+        .nav-tabs>li>a:hover {
+            background-color: rgba(251, 64, 75, 0.8);
+            /*background-color: #FFF;*/
+            color: #555;
+            border-radius: none;
+        }
+
+        .card-wizard .nav-pills.main>li>a {
+            background-color: rgba(238, 238, 238, 0.5);
+            color: rgba(251, 64, 75, 0.8);
+        }
+
+        .nav-pills.main>li.active>a,
+        .nav-pills.main>li.active>a:hover,
+        .nav-pills.main>li.active>a:focus {
+            background-color: rgba(251, 64, 75, 0.8);
+            color: #FFF;
+        }
+
+        .card .card-footer button {
+            background-color: rgba(251, 64, 75, 0.8);
+        }
+
+        .card-wizard .content .panel .panel-body .header ul li.active {
+            background-color: #2185D0;
+        }
+
+        .card-wizard .content .panel .panel-body .header ul li {
+            background-color: rgba(251, 64, 75, 0.5);
+        }
+
+        .popo-list li:hover {
+            background-color: rgba(251, 64, 75, 0.8);
+        }
+
+        .sidebar .sidebar-wrapper>.nav li.active>a,
+        .off-canvas-sidebar .sidebar-wrapper>.nav li.active>a {
+            color: #555;
+            font-weight: 800;
+        }
+
+        .sidebar .sidebar-wrapper>.nav li.active>a:hover,
+        .off-canvas-sidebar .sidebar-wrapper>.nav li.active>a:hover {
+            color: #555;
+            font-weight: 800;
+        }
+
+        .dropdown-menu>li>a:focus,
+        .dropdown-menu>li>a:hover {
+            background-color: rgba(251, 64, 75, 0.8);
+        }
+
+        .es-list li.selected {
+            background: rgba(251, 64, 75, 0.8);
+        }
+
+        .navbar-default .navbar-form .dropdown-menu>.active>a,
+        .navbar-default .navbar-form .dropdown-menu>.active>a:focus,
+        .navbar-default .navbar-form .dropdown-menu>.active>a:hover {
+            background-color: rgba(251, 64, 75, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar clearfix" data-color="red">
+            <div class="logo">
+                <a class="simple-text" href="./index.html" style="font-size: 24px"><b>后台管理系统</b></a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="list">
+                        <a data-toggle="collapse" href="#carouselManagement" aria-expanded="false" class="collapsed">
+                            <i class="glyphicon glyphicon-picture"></i>
+                            <p>
+                                <b>轮播图管理</b>
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+                        <div class="collapse" id="carouselManagement" aria-expanded="false">
+                            <ul class="nav">
+                                <li><a href="#/addCarousel" data-menu-id="addCarousel" style="font-size: 16px">新增轮播图</a>
+                                </li>
+                                <li><a href="#/editCarousel" data-menu-id="editCarousel"
+                                        style="font-size: 16px">编辑轮播图</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="list">
+                        <a data-toggle="collapse" href="#paperManagement" aria-expanded="false" class="collapsed">
+                            <i class="glyphicon glyphicon-list-alt"></i>
+                            <p>
+                                <b>论文管理</b>
+                                <b class="caret"></b>
+                            </p>
+                        </a>
+                        <div class="collapse" id="paperManagement" aria-expanded="false">
+                            <ul class="nav">
+                                <li><a href="#/addPaper" data-menu-id="addPaper" style="font-size: 16px">新增论文</a></li>
+                                <li><a href="#/editPaper" data-menu-id="editPaper" style="font-size: 16px">编辑论文</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-background"></div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">
+                            <img src="../imgs/main_logo.png" alt=""
+                                style="max-width: 200px; margin-top: -20px; margin-left: 640px">
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li role="presentation">
+                            <a>欢迎你， <span class="badge" style="position:initial">admin</span></a>
+                        </li>
+                        <li>
+                            <a href="../login/logout"><span class="glyphicon glyphicon-log-out"
+                                    style="margin-top: 4px"></span> 注销</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="active">1、新增轮播图的内容：大家好我叫demo</div>
+                    <div>2、编辑轮播图的内容：啦啦啦啦啦啦</div>
+                    <div>3、新增论文的内容：我是不同内容哦~</div>
+                    <div>4、编辑论文的内容：把迪拜弟弟</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <script>
+        $('.col-md-12 div.active').show().siblings().hide()
+
+        $('#carouselManagement ul li').click(function(){  //跟昨天那个原理一样
+            $('.col-md-12 div').eq($(this).index()).show().siblings().hide()  //这里的index要改一下，+1才能对应到正确的内容
+        })
+
+        $('#paperManagement ul li').click(function(){
+            $('.col-md-12 div').eq($(this).index()+2).show().siblings().hide()   // 这里要index+3
+        })
+    </script>
+</body>
+
+</html>
