@@ -4,15 +4,9 @@
 .form-bg{
     background: #cf000f;
 }
-#triangle{
-    width: 0;
-    height: 0;
-    border: 80px solid transparent;
-    border-left: 80px solid  #cf000f;
-    }
 #number_bkg{
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     background-color: #cf000f;
     border-radius: 7px;
     text-align: center;
@@ -31,7 +25,9 @@
     left: 0;
 }
 /*分页样式*/
-.pagination-outer{ text-align: center; }
+.pagination-outer{ 
+    text-align: center; 
+}
 .pagination{
     font-family: 'Rubik', sans-serif;
     display: inline-flex;
@@ -40,12 +36,12 @@
 .pagination li a.page-link{
     color:  #cf000f;
     background-color: transparent;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 500px;
-    line-height: 18px;
-    height: 30px;
-    width: 30px;
-    margin: 0 5px 10px;
+    line-height: 22px;
+    height: 35px;
+    width: 35px;
+    margin: 0 5px 5px;
     border: none;
     border-radius: 0;
     overflow: hidden;
@@ -227,3 +223,90 @@
     font-family: "SourceHanSansCN";
     src: url('../fonts/SourceHanSansCN-Normal.otf');
 }
+.alignleft { 
+    display: inline; 
+    float: left; 
+} 
+.alignright { 
+    display: inline; 
+} 
+.aligncenter { 
+    clear: both; 
+    display: block; 
+    margin:auto; 
+}
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100.7%;
+}
+/*导航栏*/
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #cf000f;
+  }
+  .navbar-default .navbar-brand {
+    color: #cf000f;
+  }
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    color: #fffafa;
+  }
+  .navbar-default .navbar-text {
+    color: #cf000f;
+  }
+  .navbar-default .navbar-nav > li > a {
+    color: #cf000f;
+  }
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #fffafa;
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #fffafa;
+    background-color: #cf000f;
+  }
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+    color: #fffafa;
+    background-color: #cf000f;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: #cf000f;
+  }
+  .navbar-default .navbar-toggle:hover,
+  .navbar-default .navbar-toggle:focus {
+    background-color: #cf000f;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #cf000f;
+  }
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    border-color: #cf000f;
+  }
+  .navbar-default .navbar-link {
+    color: #cf000f;
+  }
+  .navbar-default .navbar-link:hover {
+    color: #fffafa;
+  }
+  
+  @media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+      color: #cf000f;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+      color: #fffafa;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+      color: #fffafa;
+      background-color: #cf000f;
+    }
+  }
