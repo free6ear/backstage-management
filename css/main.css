@@ -310,3 +310,14 @@
       background-color: #cf000f;
     }
   }
+  .form-control：focus {
+      border-color: #f03434;
+  }
+  .sidebar .sidebar-wrapper>.nav li.active>a:active {
+    color: #f5f5f5;
+    font-weight: 600;
+}
+  .sidebar .sidebar-wrapper>.nav li.active>a:hover {
+      color: #f5f5f5;
+      font-weight: 600;
+  }

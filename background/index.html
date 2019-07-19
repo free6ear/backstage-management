@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="./css/themes/azure.css" id="themes">
     <link href="../css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="../css/bootstrap/bootstrap-fileinput-master/css/fileinput.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap-fileinput-master/css/fileinput.css" />
     <title>后台管理系统</title>
     <link rel="stylesheet" href="../imgs/back_icon.png">
     <style>
@@ -100,14 +100,14 @@
 
         .sidebar .sidebar-wrapper>.nav li.active>a,
         .off-canvas-sidebar .sidebar-wrapper>.nav li.active>a {
-            color: #555;
-            font-weight: 800;
+            color: #f5f5f5;
+            font-weight: 600;
         }
 
         .sidebar .sidebar-wrapper>.nav li.active>a:hover,
         .off-canvas-sidebar .sidebar-wrapper>.nav li.active>a:hover {
-            color: #555;
-            font-weight: 800;
+            color: #f5f5f5;
+            font-weight: 600;
         }
 
         .dropdown-menu>li>a:focus,
@@ -126,7 +126,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="wrapper">
         <div class="sidebar clearfix" data-color="red">
@@ -134,7 +133,7 @@
                 <a class="simple-text" href="./index.html"><img src="../imgs/bak_brand.png" alt="后台管理系统"></a>
             </div>
             <div class="sidebar-wrapper">
-                <ul class="nav">
+                <ul class="nav" id="tab">
                     <li class="list">
                         <a data-toggle="collapse" href="#paperManagement" aria-expanded="false" class="collapsed">
                             <i class="glyphicon glyphicon-list-alt" style="font-size: 23px"></i>
@@ -143,10 +142,10 @@
                                 <b class="caret"></b>
                             </p>
                         </a>
-                        <div class="collapse" id="paperManagement" aria-expanded="false">
+                        <div class="collapse" id="paperManagement" aria-expanded="true">
                             <ul class="nav">
-                                <li><a href="#/editPaper" data-menu-id="editPaper" style="font-size: 18px">编辑论文</a></li>
-                                <li><a href="#/addPaper" data-menu-id="addPaper" style="font-size: 18px">新增论文</a></li>
+                                <li class="active"><a href="#/editPaper" data-toggle="tab" style="font-size: 18px">编辑论文</a></li>
+                                <li><a href="#/addPaper" data-toggle="tab" style="font-size: 18px">新增论文</a></li>
                             </ul>
                         </div>
                     </li>
@@ -160,8 +159,8 @@
                         </a>
                         <div class="collapse" id="carouselManagement" aria-expanded="false">
                             <ul class="nav">
-                                <li><a href="#/editCarousel" data-menu-id="editCarousel" style="font-size: 18px">编辑轮播图</a></li>
-                                <li><a href="#/addCarousel" data-menu-id="addCarousel" style="font-size: 18px">新增轮播图</a></li>
+                                <li><a href="#/editCarousel" data-toggle="tab" style="font-size: 18px">编辑轮播图</a></li>
+                                <li><a href="#/addCarousel" data-toggle="tab" style="font-size: 18px">新增轮播图</a></li>
                             </ul>
                         </div>
                     </li>
@@ -190,366 +189,366 @@
                 </div>
             </nav>
             <div class="row">
-                <!--编辑论文-->
-                <div class="col-md-12" id="editPaperContent">
-                    <table class="table" style="margin-top: -15px; margin-bottom: 12px">
-                        <thead class="row" style="color: #cf000f; margin-top: 20px; margin-bottom: -10px">
-                            <th class="col-xs-1" style="text-align: center">序号</th>
-                            <th class="col-xs-8" style="text-align: center">标题</th>
-                            <th class="col-xs-1" style="text-align: center">作者</th>
-                            <th class="col-xs-2" style="text-align: center">操作</th>
-                        </thead>
-                        <tbody style="text-align: center; font-weight: 600">
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>1</font>
-                                    </div>
-                                </td>
-                                <td><font>混合动力车电池托盘的优化设计</font></td>
-                                <td>李志祥</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
+                    <div class="tab-content">
+                    <!--编辑论文-->
+                    <div class="col-md-12 active" id="editPaperContent">
+                        <table class="table" style="margin-top: -15px; margin-bottom: 12px">
+                            <thead class="row" style="color: #cf000f; margin-top: 20px; margin-bottom: -10px">
+                                <th class="col-xs-1" style="text-align: center">序号</th>
+                                <th class="col-xs-8" style="text-align: center">标题</th>
+                                <th class="col-xs-1" style="text-align: center">作者</th>
+                                <th class="col-xs-2" style="text-align: center">操作</th>
+                            </thead>
+                            <tbody style="text-align: center; font-weight: 600">
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>1</font>
+                                        </div>
+                                    </td>
+                                    <td><font>混合动力车电池托盘的优化设计</font></td>
+                                    <td>李志祥</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>2</font>
+                                        </div>
+                                    </td>
+                                    <td><font>熔模铸造工艺优化分析</font></td>
+                                    <td>刘海峰</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                        <font>3</font>
+                                        </div>
+                                    </td>
+                                    <td><font>一种新型轿车前舱盖结构优化分析</font></td>
+                                    <td>刘小丽</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>4</font>
+                                        </div>
+                                    </td>
+                                    <td><font>弯曲工况下车轮强度疲劳分析方法对比</font></td>
+                                    <td>卢晨霞</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>2</font>
-                                    </div>
-                                </td>
-                                <td><font>熔模铸造工艺优化分析</font></td>
-                                <td>刘海峰</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                       <font>3</font>
-                                    </div>
-                                </td>
-                                <td><font>一种新型轿车前舱盖结构优化分析</font></td>
-                                <td>刘小丽</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>4</font>
-                                    </div>
-                                </td>
-                                <td><font>弯曲工况下车轮强度疲劳分析方法对比</font></td>
-                                <td>卢晨霞</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                        </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>5</font>
-                                    </div>
-                                </td>
-                                <td><font>HyperWorks在某袋天窗顶盖的刚度分析中应用</font></td>
-                                <td>陆志成</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>6</font>
-                                    </div>
-                                </td>
-                                <td><font>OptiStruct在白车身焊点优化中的应用</font></td>
-                                <td>罗淼</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>7</font>
-                                    </div>
-                                </td>
-                                <td><font>HyperView在方向盘疲劳分析中的应用</font></td>
-                                <td>欧阳海彬</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>8</font>
-                                    </div>
-                                </td>
-                                <td><font>Radioss Application in Airbag Simulation</font></td>
-                                <td>欧阳海彬</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>9</font>
-                                    </div>
-                                </td>
-                                <td><font>基于HyperWorks的自卸车车架静强度分析</font></td>
-                                <td>屈磊</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                       <font>10</font>
-                                    </div>
-                                </td>
-                                <td><font>基于HyperWorks的发动机罩盖结构优化设计</font></td>
-                                <td>屈新田</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>11</font>
-                                    </div>
-                                </td>
-                                <td><font>驱动电机转子结构优化分析</font></td>
-                                <td>屈新田</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>12</font>
-                                    </div>
-                                </td>
-                                <td><font>基于拓扑优化的车身结构研究</font></td>
-                                <td>翟元</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>13</font>
-                                    </div>
-                                </td>
-                                <td><font>基于morph功能的HyperForm多序冲压成形应用</font></td>
-                                <td>苪玉龙</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>14</font>
-                                    </div>
-                                </td>
-                                <td><font>MotionView在副车间开发中的应用</font></td>
-                                <td>沈福亮</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="number_bkg" style="color: white">
-                                        <font>15</font>
-                                    </div>
-                                </td>
-                                <td><font>基于HyperStudy传动轴减振圈优化设计</font></td>
-                                <td>石朝亮</td>
-                                <td>
-                                    <a href="#" id="edit">
-                                        <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                    &nbsp;
-                                    <a href="#" id="delete">
-                                        <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="row clearfix">
-                        <div class="col-md-12 column" style="margin-top: -30px">
-                            <div class="demo" style="min-height: 40px;">          
-                                <div class="row pad-15">
-                                    <div class="col-md-12">
-                                        <nav class="pagination-outer" aria-label="Page navigation">
-                                            <ul class="pagination">
-                                                <li class="page-item">
-                                                    <a href="#" class="page-link" aria-label="Previous">
-                                                        <span aria-hidden="true"><b><</b></span>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                                <li class="page-item">
-                                                    <a href="#" class="page-link" aria-label="Next">
-                                                        <span aria-hidden="true"><b>></b></span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>5</font>
+                                        </div>
+                                    </td>
+                                    <td><font>HyperWorks在某袋天窗顶盖的刚度分析中应用</font></td>
+                                    <td>陆志成</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>6</font>
+                                        </div>
+                                    </td>
+                                    <td><font>OptiStruct在白车身焊点优化中的应用</font></td>
+                                    <td>罗淼</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>7</font>
+                                        </div>
+                                    </td>
+                                    <td><font>HyperView在方向盘疲劳分析中的应用</font></td>
+                                    <td>欧阳海彬</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>8</font>
+                                        </div>
+                                    </td>
+                                    <td><font>Radioss Application in Airbag Simulation</font></td>
+                                    <td>欧阳海彬</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>9</font>
+                                        </div>
+                                    </td>
+                                    <td><font>基于HyperWorks的自卸车车架静强度分析</font></td>
+                                    <td>屈磊</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                        <font>10</font>
+                                        </div>
+                                    </td>
+                                    <td><font>基于HyperWorks的发动机罩盖结构优化设计</font></td>
+                                    <td>屈新田</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>11</font>
+                                        </div>
+                                    </td>
+                                    <td><font>驱动电机转子结构优化分析</font></td>
+                                    <td>屈新田</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>12</font>
+                                        </div>
+                                    </td>
+                                    <td><font>基于拓扑优化的车身结构研究</font></td>
+                                    <td>翟元</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>13</font>
+                                        </div>
+                                    </td>
+                                    <td><font>基于morph功能的HyperForm多序冲压成形应用</font></td>
+                                    <td>苪玉龙</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>14</font>
+                                        </div>
+                                    </td>
+                                    <td><font>MotionView在副车间开发中的应用</font></td>
+                                    <td>沈福亮</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="number_bkg" style="color: white">
+                                            <font>15</font>
+                                        </div>
+                                    </td>
+                                    <td><font>基于HyperStudy传动轴减振圈优化设计</font></td>
+                                    <td>石朝亮</td>
+                                    <td>
+                                        <a href="#" id="edit">
+                                            <i class="glyphicon glyphicon-edit" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                        &nbsp;
+                                        <a href="#" id="delete">
+                                            <i class="glyphicon glyphicon-trash" style="color:grey; font-size: 25px; margin-top: 2px"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!--底部分页-->
+                        <div class="row clearfix">
+                            <div class="col-md-12 column" style="margin-top: -20px">
+                                <div class="demo" style="min-height: 40px;">          
+                                    <div class="row pad-15">
+                                        <div class="col-md-12">
+                                            <nav class="pagination-outer" aria-label="Page navigation">
+                                                <ul class="pagination">
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link" aria-label="Previous">
+                                                            <span aria-hidden="true"><b><</b></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                    <li class="page-item">
+                                                        <a href="#" class="page-link" aria-label="Next">
+                                                            <span aria-hidden="true"><b>></b></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xs-offset-4 col-xs-4" id="addPaperContent" style="margin-top: 40px">
-                    <form role="form"  style="font-size: 18px">
-                        <div class="form-group">
-                            <!-- <i class="glyphicon glyphicon-list-alt" style="color: grey; font-size: 25px"></i> -->
-                            <label for="name">论文标题：</label>
-                            <input type="text" class="form-control" id="name" placeholder="请输入论文标题">
-                        </div>
-                        <div class="form-group">
-                            <!-- <i class="glyphicon glyphicon-user" style="color: grey; font-size: 25px"></i> -->
-                            <label for="name">论文作者：</label>
-                            <input type="text" class="form-control" id="name" placeholder="请输入论文作者">
+                    <!--新增论文-->
+                    <div class="col-xs-offset-3 col-xs-6" id="addPaperContent" style="margin-top: 5px">
+                        <form role="form"  style="font-size: 18px">
+                            <div class="form-group">
+                                <!-- <i class="glyphicon glyphicon-list-alt" style="color: grey; font-size: 25px"></i> -->
+                                <label for="name">论文标题：</label>
+                                <input type="text" class="form-control" id="paperTitle" placeholder="请输入论文标题">
                             </div>
-                        <div class="form-group">
-                            <!-- <i class="glyphicon glyphicon-file" style="color: grey; font-size: 25px"></i> -->
-                            <!-- <label for="inputfile">论文文件：</label>
-                            <input type="file" id="inputfile">
-                            <div class="checkbox" style="float:right">
-                                <button type="submit" class="btn btn-danger">确定</button>
-                            </div> -->
-
-                        <div class="panel-body">
-                            <div class="col-sm-12">
-                            <input id="input-id" name="file" multiple type="file" data-show-caption="true">
+                            <div class="form-group">
+                                <!-- <i class="glyphicon glyphicon-user" style="color: grey; font-size: 25px"></i> -->
+                                <label for="name">论文作者：</label>
+                                <input type="text" class="form-control" id="paperAuthor" placeholder="请输入论文作者">
                             </div>
-                        </div>
-                        </div>
-                    </form>     
-                </div>
-                    <!-- <div id="editCarouselContent">edit carousel page demo.</div>
-                    <div id="addCarouselContent">add carousel page demo.</div> -->
+                            <div class="form-group">
+                                <label for="inputfile">论文文件：</label>
+                                <input id="input-id" name="paperFile" multiple type="file" data-show-caption="true">
+                            </div>
+                        </form>     
+                    </div>
+                    <!--新增轮播图-->
+                    <div class="col-xs-offset-4 col-xs-4" id="addCarouselContent" style="margin-top: 40px">
+                        <form role="form"  style="font-size: 18px">
+                            <div class="form-group">
+                                <!-- <i class="glyphicon glyphicon-list-alt" style="color: grey; font-size: 25px"></i> -->
+                                <label for="name">图片标题：</label>
+                                <input type="text" class="form-control" id="carouselTitle" placeholder="请输入轮播图标题">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputfile">选择图片：</label>
+                                <input id="input-id" name="CarouselPic" multiple type="file" data-show-caption="true">
+                            </div>
+                        </form>      
+                    </div>
+                        <!-- <div id="editCarouselContent">edit carousel page demo.</div>
+                        <div id="addCarouselContent">add carousel page demo.</div> -->
                 </div>
             </div>
         </div>
     </div>
     <script src="../js/bootstrap/3.3.6/bootstrap.min.js"></script>
+    <script src="../css/bootstrap/bootstrap-fileinput-master/js/fileinput.js"></script>
+    <script src="../css/bootstrap/bootstrap-fileinput-master/js/locales/zh.js"></script>
     <script src="../js/app.js"></script>
     <script type="text/javascript" src="js/fileinput.min.js"></script>
     <script type="text/javascript" src="js/zh.js"></script>
     <script>
-        $('#addPaperContent').show().siblings().hide()
-
-        $('#carouselManagement ul li').click(function(){
-            $('.col-md-12 div').eq($(this).index()).show().siblings().hide()
-        })
-
-        $('#paperManagement ul li').click(function(){
-            $('.col-md-12 div').eq($(this).index()+2).show().siblings().hide()
-        })
     </script>
 </body>
 
