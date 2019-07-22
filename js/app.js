@@ -27,7 +27,7 @@ function initFileInput() {
         previewFileIcon: "<i class='glyphicon glyphicon-king'></i>",//当检测到用于预览的不可读文件类型时，将在每个预览文件缩略图中显示的图标。默认为<i class="glyphicon glyphicon-file"></i>  
         layoutTemplates:{
             actionUpload:'',//去除上传预览缩略图中的上传图片
-            actionZoom:'',   //去除上传预览缩略图中的查看详情预览的缩略图标
+            actionZoom:'true',   //去除上传预览缩略图中的查看详情预览的缩略图标
             actionDownload:'false', //去除上传预览缩略图中的下载图标
             actionDelete:'' //去除上传预览的缩略图中的删除图标
         },//对象用于渲染布局的每个部分的模板配置。您可以设置以下模板来控制窗口小部件布局.eg:去除上传图标
